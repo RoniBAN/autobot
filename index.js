@@ -23,7 +23,7 @@ const loli = new lolis()
 const welkom = JSON.parse(fs.readFileSync('./src/welkom.json'))
 const nsfw = JSON.parse(fs.readFileSync('./src/nsfw.json'))
 const samih = JSON.parse(fs.readFileSync('./src/simi.json'))
-prefix = '.'
+prefix = '!'
 blocked = []
 
 function kyun(seconds){
@@ -172,7 +172,7 @@ async function starts() {
 				case 'informa':
 					client.sendMessage(from, help(prefix), text)
 					break
-				case 'info':
+				case 'infot':
 					me = client.user
 					uptime = process.uptime()
 					teks = `*Nama bot* : ${me.name}\n*Nomor Bot* : @${me.jid.split('@')[0]}\n*Prefix* : ${prefix}\n*Total Block Contact* : ${blocked.length}\n*The bot is active on* : ${kyun(uptime)}`
